@@ -118,7 +118,7 @@ class _ImageSliderState extends State<ImageSlider> {
                                                   borderRadius:
                                                       BorderRadius.circular(
                                                           5.0)),
-                                              primary: switchThemes
+                                              backgroundColor: switchThemes
                                                   ? Colors.black
                                                       .withOpacity(0.7)
                                                   : Colors.white70,

@@ -18,7 +18,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) async {});
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) async {});
     try {
       NotificationsProvider notificationsProvider =
           Provider.of<NotificationsProvider>(context, listen: false);

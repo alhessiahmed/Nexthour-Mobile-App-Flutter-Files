@@ -171,7 +171,7 @@ class _ApplyCouponScreenState extends State<ApplyCouponScreen> {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) async {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) async {
       CouponProvider couponProvider =
           Provider.of<CouponProvider>(context, listen: false);
       await couponProvider.getCoupons(context);
@@ -237,8 +237,7 @@ class _ApplyCouponScreenState extends State<ApplyCouponScreen> {
                                     ? Center(
                                         child: CircularProgressIndicator(),
                                       )
-                                    : RaisedButton(
-                                        color: activeDotColor,
+                                    : ElevatedButton(
                                         child: Text(translate("Apply_")),
                                         onPressed: () {
                                           final form = _formKey.currentState!;

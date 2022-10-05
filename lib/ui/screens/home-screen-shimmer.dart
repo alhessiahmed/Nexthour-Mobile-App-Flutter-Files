@@ -25,7 +25,6 @@ class _HomeScreenShimmerState extends State<HomeScreenShimmer>
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     animation = AnimationController(
       vsync: this,

@@ -165,7 +165,7 @@ class _PaystackPaymentState extends State<PaystackPayment> {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       var paymentKey = Provider.of<PaymentKeyProvider>(context, listen: false)
           .paymentKeyModel!;
       if (paymentKey.paystack == "null" ||

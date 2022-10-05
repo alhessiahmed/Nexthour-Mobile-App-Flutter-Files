@@ -81,7 +81,7 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
                   ),
                 ),
                 actions: <Widget>[
-                  FlatButton(
+                  TextButton(
                     child: Text(
                       translate('Ok_'),
                       style: TextStyle(
@@ -210,10 +210,9 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
 
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       var userDetails = Provider.of<UserProfileProvider>(context, listen: false)
           .userProfileModel!;
       print("DOB: ${userDetails.user!.dob}");

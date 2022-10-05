@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 const String testDevice = 'CCC858A8789C617693316E69996C70B8';
@@ -14,7 +16,9 @@ final AdRequest request = AdRequest(
 
 Future<void> createInterstitialAd() async {
   InterstitialAd.load(
-    adUnitId: InterstitialAd.testAdUnitId,
+    adUnitId: Platform.isAndroid
+        ? 'ENTER_AD_UNIT_ID_FOR_ANDROID_HERE'
+        : 'ENTER_AD_UNIT_ID_FOR_IOS_HERE',
     request: request,
     adLoadCallback: InterstitialAdLoadCallback(
       onAdLoaded: (InterstitialAd ad) {

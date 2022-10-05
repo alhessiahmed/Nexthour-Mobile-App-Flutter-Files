@@ -402,7 +402,7 @@ class _BraintreePaymentScreenState extends State<BraintreePaymentScreen> {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20.0),
                 ),
-                primary: Color.fromRGBO(72, 163, 198, 1.0)),
+                backgroundColor: Color.fromRGBO(72, 163, 198, 1.0)),
             onPressed: getClientNonce,
             child: Text(
               "Continue Pay",
@@ -416,7 +416,6 @@ class _BraintreePaymentScreenState extends State<BraintreePaymentScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     setState(() {
       isBack = true;

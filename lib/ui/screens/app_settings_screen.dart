@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'package:connectivity/connectivity.dart';
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_translate/flutter_translate.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -172,7 +172,6 @@ class _AppSettingsScreenState extends State<AppSettingsScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     this.getValuesSF();
 

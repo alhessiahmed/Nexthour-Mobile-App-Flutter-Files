@@ -109,7 +109,6 @@ class _CashfreePaymentState extends State<CashfreePayment> {
 
   @override
   void didChangeDependencies() {
-    // TODO: implement didChangeDependencies
     super.didChangeDependencies();
     loadData();
   }
@@ -252,10 +251,10 @@ class _CashfreePaymentState extends State<CashfreePayment> {
           flex: 1,
           child: ButtonTheme(
             height: 45,
-            child: RaisedButton(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20.0),
-              ),
+            child: ElevatedButton(
+              // shape: RoundedRectangleBorder(
+              //   borderRadius: BorderRadius.circular(20.0),
+              // ),
               onPressed: () {
                 if ((cashfreeAppID == null || cashfreeAppID == '') ||
                     (cashfreeSecretKey == null || cashfreeSecretKey == '')) {
@@ -266,7 +265,10 @@ class _CashfreePaymentState extends State<CashfreePayment> {
                   makePayment();
                 }
               },
-              color: Color.fromRGBO(72, 163, 198, 1.0),
+
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Color.fromRGBO(72, 163, 198, 1.0),
+              ),
               child: Text(
                 "Continue Pay",
                 style: TextStyle(color: Colors.white),

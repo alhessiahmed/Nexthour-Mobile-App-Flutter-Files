@@ -184,10 +184,10 @@ class _RazorPaymentState extends State<RazorPayment> {
           flex: 1,
           child: ButtonTheme(
             height: 45,
-            child: RaisedButton(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20.0),
-              ),
+            child: ElevatedButton(
+              // shape: RoundedRectangleBorder(
+              //   borderRadius: BorderRadius.circular(20.0),
+              // ),
               onPressed: () {
                 if (razorPayKey == null) {
                   Fluttertoast.showToast(msg: "Razorpay key not entered.");
@@ -196,7 +196,10 @@ class _RazorPaymentState extends State<RazorPayment> {
                   openCheckout();
                 }
               },
-              color: Color.fromRGBO(72, 163, 198, 1.0),
+
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Color.fromRGBO(72, 163, 198, 1.0),
+              ),
               child: Text(
                 "Continue Pay",
                 style: TextStyle(color: Colors.white),

@@ -118,7 +118,6 @@ class _WishListViewState extends State<WishListView> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     setState(() {
       _visible = false;

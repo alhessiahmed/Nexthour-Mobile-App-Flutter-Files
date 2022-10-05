@@ -12,7 +12,7 @@ import '/common/global.dart';
 import '/common/route_paths.dart';
 import '/providers/user_profile_provider.dart';
 import 'package:provider/provider.dart';
-import 'package:share/share.dart';
+import 'package:share_plus/share_plus.dart';
 import '/providers/app_config.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
@@ -33,7 +33,6 @@ class _MenuScreenState extends State<MenuScreen> {
   String? platform;
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _loginWithAmazon.onLwaAuthorizeChanged.listen((LwaAuthorizeResult auth) {
       setState(() {

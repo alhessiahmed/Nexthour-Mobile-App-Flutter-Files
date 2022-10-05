@@ -94,8 +94,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
               ),
             ),
             actions: <Widget>[
-              FlatButton(
-                color: Colors.blueAccent,
+              TextButton(
+                style: TextButton.styleFrom(
+                  foregroundColor: Colors.blueAccent,
+                ),
                 child: Text('OK'),
                 onPressed: () {
                   Navigator.pop(context);
@@ -113,8 +115,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
   showAlertDialog(BuildContext context, String msg) {
     var msg1 = msg.replaceAll('"', "");
-    Widget okButton = FlatButton(
-      color: primaryBlue,
+    Widget okButton = TextButton(
+      style: TextButton.styleFrom(
+        foregroundColor: primaryBlue,
+      ),
       child: Text("OK"),
       onPressed: () {
         Navigator.pop(context);
@@ -327,13 +331,17 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                     children: [
                                       Expanded(
                                         flex: 1,
-                                        child: RaisedButton(
-                                          padding: EdgeInsets.symmetric(
+                                        child: ElevatedButton(
+                                          /* padding: EdgeInsets.symmetric(
                                               vertical: 15.0),
                                           shape: RoundedRectangleBorder(
                                               borderRadius:
                                                   BorderRadius.circular(5.0)),
-                                          color: Theme.of(context).primaryColor,
+                      */
+                                          style: ElevatedButton.styleFrom(
+                                            backgroundColor:
+                                                Theme.of(context).primaryColor,
+                                          ),
                                           child: _isLoading == true
                                               ? CircularProgressIndicator()
                                               : Text(

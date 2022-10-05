@@ -229,7 +229,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 indicatorColor: Color.fromRGBO(125, 183, 91, 1.0),
                 labelStyle: TextStyle(fontWeight: FontWeight.w500),
                 // ignore: deprecated_member_use
-                labelColor: Theme.of(context).textSelectionColor,
+
                 unselectedLabelColor: Theme.of(context).hintColor,
                 unselectedLabelStyle: TextStyle(fontWeight: FontWeight.w400),
                 indicator: BoxDecoration(

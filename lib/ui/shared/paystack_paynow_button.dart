@@ -35,11 +35,14 @@ class PayStackPlatformButton extends StatelessWidget {
             ],
           ),
         ),
-        child:  RaisedButton(
+        child: ElevatedButton(
           onPressed: function,
-          color: Color.fromRGBO(72, 163, 198, 1.0),
-          textColor: Colors.white,
-          padding: const EdgeInsets.symmetric(vertical: 13.0, horizontal: 10.0),
+
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Color.fromRGBO(72, 163, 198, 1.0),
+          ),
+          // textColor: Colors.white,
+          // padding: const EdgeInsets.symmetric(vertical: 13.0, horizontal: 10.0),
           child: new Text(
             string.toUpperCase(),
             style: const TextStyle(fontSize: 17.0),

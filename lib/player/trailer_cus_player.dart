@@ -55,7 +55,7 @@ class _TrailerCustomPlayerState extends State<TrailerCustomPlayer>
     setState(() {
       playerTitle = widget.title;
     });
-    WidgetsBinding.instance!.addObserver(this);
+    WidgetsBinding.instance.addObserver(this);
     print(widget.url);
     _videoPlayerController1 = VideoPlayerController.network(widget.url!);
     _videoPlayerController2 = VideoPlayerController.network(widget.url!);

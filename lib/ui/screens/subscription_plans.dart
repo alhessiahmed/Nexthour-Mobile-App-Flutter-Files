@@ -48,7 +48,7 @@ class _SubscriptionPlanState extends State<SubscriptionPlan> {
   void initState() {
     super.initState();
     print("button : $buttonIndex");
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) async {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) async {
       plansData();
     });
   }
@@ -291,7 +291,7 @@ class _SubscriptionPlanState extends State<SubscriptionPlan> {
                             "Purchase_any_of_the_membership_package_from_below"),
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                            color: Theme.of(context).accentColor,
+                            color: Theme.of(context).colorScheme.secondary,
                             fontSize: 16.0),
                       ),
                     ),

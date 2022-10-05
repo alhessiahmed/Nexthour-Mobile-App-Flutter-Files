@@ -68,8 +68,10 @@ class _MaterialControlsState extends State<MaterialControls>
               )),
               Container(
                 alignment: Alignment.center,
-                child: FlatButton(
-                  color: Theme.of(context).primaryColor,
+                child: TextButton(
+                  style: TextButton.styleFrom(
+                    foregroundColor: Theme.of(context).primaryColor,
+                  ),
                   child: Text(
                     'Go Back',
                     style: TextStyle(color: Colors.white),
@@ -633,7 +635,7 @@ class _MaterialControlsState extends State<MaterialControls>
             colors: ChewieProgressColors(
                 playedColor: Theme.of(context).primaryColor,
                 handleColor: Theme.of(context).primaryColor,
-                bufferedColor: Theme.of(context).accentColor,
+                bufferedColor: Theme.of(context).colorScheme.secondary,
                 backgroundColor: Theme.of(context).disabledColor)),
       ),
     );

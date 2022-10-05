@@ -208,7 +208,7 @@ class _StripePaymentState extends State<StripePayment> {
               title: Text('Oops!'),
               content: const Text('Please enter all fields!'),
               actions: <Widget>[
-                FlatButton(
+                TextButton(
                   child: Text(
                     'Ok',
                     style: TextStyle(fontSize: 16.0),
@@ -739,12 +739,11 @@ class _StripePaymentState extends State<StripePayment> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     setState(() {
       _visible = false;
     });
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       var stripeKey = Provider.of<PaymentKeyProvider>(context, listen: false)
           .paymentKeyModel!
           .key!;

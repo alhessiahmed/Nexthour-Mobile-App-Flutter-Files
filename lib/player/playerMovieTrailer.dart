@@ -8,7 +8,7 @@ import 'package:webview_flutter/webview_flutter.dart';
 
 class PlayerMovieTrailer extends StatefulWidget {
   PlayerMovieTrailer({this.id, this.type});
-  final dynamic  id;
+  final dynamic id;
   final type;
   @override
   _PlayerMovieTrailerState createState() => _PlayerMovieTrailerState();
@@ -20,7 +20,7 @@ class _PlayerMovieTrailerState extends State<PlayerMovieTrailer>
 
   @override
   void initState() {
-    WidgetsBinding.instance!.addObserver(this);
+    WidgetsBinding.instance.addObserver(this);
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,
@@ -32,7 +32,7 @@ class _PlayerMovieTrailerState extends State<PlayerMovieTrailer>
 
   @override
   void dispose() {
-    WidgetsBinding.instance!.removeObserver(this);
+    WidgetsBinding.instance.removeObserver(this);
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_translate/flutter_translate.dart';
-import 'package:share/share.dart';
+import 'package:share_plus/share_plus.dart';
 
 // Share tab
 class SharePage extends StatelessWidget {

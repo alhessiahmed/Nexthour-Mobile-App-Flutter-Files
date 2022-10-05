@@ -81,7 +81,7 @@ class _SelectPaymentScreenState extends State<SelectPaymentScreen>
     validCoupon = false;
     couponCode = '';
     isStripeCoupon = false;
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) async {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) async {
       PaymentKeyProvider paymentKeyProvider =
           Provider.of<PaymentKeyProvider>(context, listen: false);
       await paymentKeyProvider.fetchPaymentKeys();

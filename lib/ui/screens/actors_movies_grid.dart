@@ -27,7 +27,7 @@ class _ActorMoviesGridState extends State<ActorMoviesGrid> {
     setState(() {
       _visible = false;
     });
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) async {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) async {
       await Provider.of<ActorMoviesProvider>(context, listen: false)
           .getActorsMovies(context, widget.actorDetails.id.toString());
       setState(() {

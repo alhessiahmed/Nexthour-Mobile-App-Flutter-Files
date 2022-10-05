@@ -76,7 +76,7 @@ class TopVideoList extends StatelessWidget {
                       '${split[i]}',
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        color: Theme.of(context).accentColor,
+                        color: Theme.of(context).colorScheme.secondary,
                         fontSize: 28.0,
                         fontWeight: FontWeight.bold,
                         fontStyle: FontStyle.italic,
@@ -89,7 +89,7 @@ class TopVideoList extends StatelessWidget {
                       '${split[i]}',
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        color: Theme.of(context).accentColor,
+                        color: Theme.of(context).colorScheme.secondary,
                         fontSize: 28.0,
                         fontWeight: FontWeight.normal,
                         fontStyle: FontStyle.italic,
@@ -155,12 +155,12 @@ class TopVideoList extends StatelessWidget {
                       type: MaterialType.transparency,
                       child: new ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                            primary: Colors.transparent,
+                            foregroundColor: Colors.white,
+                            backgroundColor: Colors.transparent,
                             visualDensity: VisualDensity(
                                 vertical: VisualDensity.maximumDensity),
                             elevation: 0.0,
-                            animationDuration: Duration(seconds: 50),
-                            onPrimary: Colors.white),
+                            animationDuration: Duration(seconds: 50)),
                         child: Container(
                           alignment: Alignment.center,
                           height: 350,

@@ -136,7 +136,6 @@ class _PdfViewerState extends State<PdfViewer> {
 
   @override
   Future<void> dispose() async {
-    // TODO: implement dispose
     super.dispose();
   }
 }

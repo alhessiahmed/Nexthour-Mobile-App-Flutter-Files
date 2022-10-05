@@ -36,7 +36,7 @@ class _DescriptionTextState extends State<DescriptionText> {
                             fontSize: 15.0,
                             fontWeight: FontWeight.w800,
                             letterSpacing: 0.9,
-                            color: theme.accentColor),
+                            color: theme.colorScheme.secondary),
                       )
                     : Text(
                         '',
@@ -45,18 +45,18 @@ class _DescriptionTextState extends State<DescriptionText> {
                             fontSize: 15.0,
                             fontWeight: FontWeight.w800,
                             letterSpacing: 0.9,
-                            color: theme.accentColor),
+                            color: theme.colorScheme.secondary),
                       ),
                 descTextShowFlag
                     ? Icon(
                         Icons.keyboard_arrow_up,
                         size: 18.0,
-                        color: theme.accentColor,
+                        color: theme.colorScheme.secondary,
                       )
                     : Icon(
                         Icons.keyboard_arrow_down,
                         size: 18.0,
-                        color: theme.accentColor,
+                        color: theme.colorScheme.secondary,
                       ),
               ],
             ),
