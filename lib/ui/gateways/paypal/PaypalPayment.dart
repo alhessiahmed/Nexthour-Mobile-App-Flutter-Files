@@ -87,7 +87,7 @@ class PaypalPaymentState extends State<PaypalPayment> {
             },
           ),
         );
-        _scaffoldKey.currentState!.showSnackBar(snackBar);
+        ScaffoldMessenger.of(context).showSnackBar(snackBar);
       }
     });
   }

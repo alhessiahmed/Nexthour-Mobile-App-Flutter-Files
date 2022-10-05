@@ -306,11 +306,13 @@ class _DownloadPageState extends State<DownloadPage>
                       ? SizedBox.shrink()
                       : Padding(
                           padding: EdgeInsets.only(left: 50.0, right: 50.0),
-                          child: RaisedButton(
-                            hoverColor: Colors.red,
-                            splashColor: Color.fromRGBO(49, 131, 41, 1.0),
-                            highlightColor: Color.fromRGBO(72, 163, 198, 1.0),
-                            color: activeDotColor,
+                          child: ElevatedButton(
+                            // hoverColor: Colors.red,
+                            // splashColor: Color.fromRGBO(49, 131, 41, 1.0),
+                            // highlightColor: Color.fromRGBO(72, 163, 198, 1.0),
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: activeDotColor,
+                            ),
                             child: Container(
                               alignment: Alignment.center,
                               width: 100.0,
@@ -363,11 +365,13 @@ class _DownloadPageState extends State<DownloadPage>
                       ? SizedBox.shrink()
                       : Padding(
                           padding: EdgeInsets.only(left: 50.0, right: 50.0),
-                          child: RaisedButton(
-                            color: activeDotColor,
-                            hoverColor: Colors.red,
-                            splashColor: Color.fromRGBO(49, 131, 41, 1.0),
-                            highlightColor: Color.fromRGBO(72, 163, 198, 1.0),
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: activeDotColor,
+                            ),
+                            // hoverColor: Colors.red,
+                            // splashColor: Color.fromRGBO(49, 131, 41, 1.0),
+                            // highlightColor: Color.fromRGBO(72, 163, 198, 1.0),
                             child: Container(
                               alignment: Alignment.center,
                               width: 100.0,
@@ -422,11 +426,13 @@ class _DownloadPageState extends State<DownloadPage>
                       ? SizedBox.shrink()
                       : Padding(
                           padding: EdgeInsets.only(left: 50.0, right: 50.0),
-                          child: RaisedButton(
-                            hoverColor: Colors.red,
-                            splashColor: Color.fromRGBO(49, 131, 41, 1.0),
-                            highlightColor: Color.fromRGBO(72, 163, 198, 1.0),
-                            color: activeDotColor,
+                          child: ElevatedButton(
+                            // hoverColor: Colors.red,
+                            // splashColor: Color.fromRGBO(49, 131, 41, 1.0),
+                            // highlightColor: Color.fromRGBO(72, 163, 198, 1.0),
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: activeDotColor,
+                            ),
                             child: Container(
                               alignment: Alignment.center,
                               width: 100.0,
@@ -479,11 +485,13 @@ class _DownloadPageState extends State<DownloadPage>
                       ? SizedBox.shrink()
                       : Padding(
                           padding: EdgeInsets.only(left: 50.0, right: 50.0),
-                          child: RaisedButton(
-                            hoverColor: Colors.red,
-                            splashColor: Color.fromRGBO(49, 131, 41, 1.0),
-                            highlightColor: Color.fromRGBO(72, 163, 198, 1.0),
-                            color: activeDotColor,
+                          child: ElevatedButton(
+                            // hoverColor: Colors.red,
+                            // splashColor: Color.fromRGBO(49, 131, 41, 1.0),
+                            // highlightColor: Color.fromRGBO(72, 163, 198, 1.0),
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: activeDotColor,
+                            ),
                             child: Container(
                               alignment: Alignment.center,
                               width: 100.0,
@@ -876,7 +884,7 @@ class _DownloadPageState extends State<DownloadPage>
           ),
           actions: <Widget>[
             // usually buttons at the bottom of the dialog
-            new FlatButton(
+            new TextButton(
               child: new Text(
                 translate("Yes_"),
                 style: TextStyle(color: activeDotColor, fontSize: 16.0),
@@ -886,7 +894,7 @@ class _DownloadPageState extends State<DownloadPage>
                 Navigator.pop(context);
               },
             ),
-            new FlatButton(
+            new TextButton(
               child: new Text(
                 translate("No_"),
                 style: TextStyle(color: activeDotColor, fontSize: 16.0),
@@ -924,7 +932,7 @@ class _DownloadPageState extends State<DownloadPage>
           ),
           actions: <Widget>[
             // usually buttons at the bottom of the dialog
-            new FlatButton(
+            new TextButton(
               child: new Text(
                 translate("Yes_"),
                 style: TextStyle(color: activeDotColor, fontSize: 16.0),
@@ -934,7 +942,7 @@ class _DownloadPageState extends State<DownloadPage>
                 Navigator.pop(context);
               },
             ),
-            new FlatButton(
+            new TextButton(
               child: new Text(
                 translate("No_"),
                 style: TextStyle(color: activeDotColor, fontSize: 16.0),
@@ -1237,7 +1245,7 @@ class _DownloadPageState extends State<DownloadPage>
           translate("You_dont_have_any_active_subscription_plan");
     }
     // set up the button
-    Widget cancelButton = FlatButton(
+    Widget cancelButton = TextButton(
       child: Text(
         translate("Cancel_"),
         style: TextStyle(color: activeDotColor, fontSize: 16.0),
@@ -1247,7 +1255,7 @@ class _DownloadPageState extends State<DownloadPage>
       },
     );
 
-    Widget subscribeButton = FlatButton(
+    Widget subscribeButton = TextButton(
       child: Text(
         translate("Subscribe_"),
         style: TextStyle(color: activeDotColor, fontSize: 16.0),
@@ -1441,7 +1449,7 @@ class _DownloadPageState extends State<DownloadPage>
                                 SizedBox(
                                   height: 32.0,
                                 ),
-                                FlatButton(
+                                TextButton(
                                     onPressed: () {
                                       _checkPermission().then((hasGranted) {
                                         setState(() {
@@ -1495,14 +1503,13 @@ class _DownloadPageState extends State<DownloadPage>
 
   @override
   void initState() {
-    // TODO: implement initState
     _bindBackgroundIsolate();
     FlutterDownloader.registerCallback(downloadCallback);
     isLoading = true;
     _permissionReady = false;
     _prepare();
     getNewFileName();
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) async {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) async {
       final userProfileProvider =
           Provider.of<UserProfileProvider>(context, listen: false)
               .userProfileModel!;

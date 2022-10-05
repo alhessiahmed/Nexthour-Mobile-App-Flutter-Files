@@ -29,7 +29,7 @@ class _PlayerMovieState extends State<PlayerMovie> with WidgetsBindingObserver {
 
   @override
   void initState() {
-    WidgetsBinding.instance!.addObserver(this);
+    WidgetsBinding.instance.addObserver(this);
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,
@@ -48,7 +48,7 @@ class _PlayerMovieState extends State<PlayerMovie> with WidgetsBindingObserver {
       DeviceOrientation.landscapeLeft,
       DeviceOrientation.landscapeRight
     ]);
-    WidgetsBinding.instance!.removeObserver(this);
+    WidgetsBinding.instance.removeObserver(this);
     super.dispose();
   }
 

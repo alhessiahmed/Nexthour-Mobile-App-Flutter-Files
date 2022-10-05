@@ -132,7 +132,6 @@ class _MultiScreenState extends State<MultiScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     this.getAllScreens();
     if (!kIsWeb) {

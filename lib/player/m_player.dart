@@ -105,7 +105,7 @@ class _MyCustomPlayerState extends State<MyCustomPlayer>
       playerTitle = widget.title;
     });
 
-    WidgetsBinding.instance!.addObserver(this);
+    WidgetsBinding.instance.addObserver(this);
 
     initializePlayer();
 

@@ -124,7 +124,6 @@ class _ResetAlertBoxContainerState extends State<ResetAlertBoxContainer> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     setState(() {
       hiddenOTP = true;

@@ -25,75 +25,78 @@ dependencies:
     sdk: flutter
 
   facebook_audience_network: ^1.0.1
-  flutter_facebook_auth: ^4.0.1
-  better_player: ^0.0.81
-  cashfree_pg: ^2.0.4+24
+  flutter_facebook_auth: ^4.4.1+1
+  better_player: ^0.0.83
+  cashfree_pg: ^2.0.12+32
   flutterwave_payment: ^0.0.4+2
-  payhere_mobilesdk_flutter: ^2.0.0
-  file_picker: ^4.5.1
+  payhere_mobilesdk_flutter: ^3.0.4
+  file_picker: ^5.2.0+1
   flutter_localizations:
     sdk: flutter
-  flutter_translate: ^3.0.1
+  flutter_translate: ^4.0.3
   loading_overlay: ^0.3.0
-  shared_preferences: ^2.0.5
-  provider: ^6.0.2
-  http: ^0.13.1
-  path_provider: ^2.0.1
-  sticky_headers: ^0.2.0
-  fluttertoast: ^8.0.4
-  intro_slider: ^3.0.2
-  image_picker: ^0.8.1+3
-  cached_network_image: ^3.0.0-nullsafety
-  sqflite: ^2.0.0+3
-  syncfusion_flutter_pdfviewer: ^19.3.59-beta
-  flutter_cache_manager: ^3.0.0-nullsafety
-  flutter_secure_storage: ^5.0.2
+  shared_preferences: ^2.0.15
+  provider: ^6.0.3
+  http: ^0.13.5
+  path_provider: ^2.0.11
+  sticky_headers: ^0.3.0+2
+  fluttertoast: ^8.0.9
+  intro_slider: ^3.0.0 #^4.2.0 # migrate to new version
+  image_picker: ^0.8.5+3
+  cached_network_image: ^3.2.2
+  sqflite: ^2.1.0
+  syncfusion_flutter_pdfviewer: ^20.3.48
+  flutter_cache_manager: ^3.3.0
+  flutter_secure_storage: ^6.0.0
   flutter_swiper: ^1.1.6
   intl: ^0.17.0
-  share: ^2.0.1
+  share_plus: ^4.5.0
   launch_review: ^3.0.1
-  page_transition: ^2.0.1-nullsafety.0
-  flutter_downloader: ^1.6.1
-  flutter_local_notifications: ^9.1.5
-  wakelock: ^0.5.2
-  permission_handler: ^9.2.0
+  page_transition: ^2.0.9
+  flutter_downloader: ^1.8.4
+  flutter_local_notifications: ^12.0.0
+  wakelock: ^0.6.2
+  permission_handler: ^10.1.0
+  # change this
   rating_bar: ^0.2.0
-  font_awesome_flutter: ^10.0.0
-  bubble_tab_indicator: ^0.1.4
+  font_awesome_flutter: ^10.2.1
+  bubble_tab_indicator: ^0.1.6
+  # change this
   open_iconic_flutter: ^0.3.0
-  firebase_core: ^1.2.0
-  firebase_auth: ^3.3.11
-  google_sign_in: ^5.0.1
+  firebase_core: ^1.24.0
+  firebase_auth: ^3.11.1
+  google_sign_in: ^5.4.2
   flutter_braintree: ^2.3.1
-  razorpay_flutter: ^1.2.9
+  razorpay_flutter: ^1.3.2
   paytm: ^3.0.1
-  flutter_paystack: ^1.0.5
+  flutter_paystack: ^1.0.6
   in_app_update: ^3.0.0
-  dio: ^4.0.0-prev3
-  flutter_inapp_purchase: 5.0.0
-  flutter_rating_bar: ^4.0.0
+  dio: ^4.0.6
+  flutter_inapp_purchase: 5.3.1 # 5.0.0
+  flutter_rating_bar: ^4.0.1
   dart_ipify: ^1.1.1
-  connectivity: ^3.0.3
-  connectivity_for_web: ^0.4.0
-  onesignal_flutter: ^3.2.7
+  connectivity_plus: ^2.3.8
+  connectivity_plus_web: ^1.2.4
+  onesignal_flutter: ^3.4.1
   flutter_widget_from_html: ^0.8.5
-  firebase_messaging: ^11.2.11
-  http_auth: ^1.0.0
+  firebase_messaging: ^13.0.4
+  http_auth: ^1.0.1
+  # change this
   currencies: ^0.1.1
-  flutter_credit_card:
-  firebase_analytics: ^9.1.2
-  google_mobile_ads: ^1.1.0
-  change_app_package_name: ^1.0.0
+  flutter_credit_card: ^3.0.4
+  firebase_analytics: ^9.3.7
+  google_mobile_ads: ^2.0.1
+  change_app_package_name: ^1.1.0
   flutter_lwa: ^2.0.0
-  horizontal_data_table: ^3.4.1
-  flutter_inappwebview: ^5.3.2
+  horizontal_data_table: ^4.1.2+2
+  flutter_inappwebview: ^5.4.4+2
   android_path_provider: ^0.3.0
-  device_info: ^2.0.2
+  device_info_plus: ^5.0.1
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.0
-  collection: ^1.15.0-nullsafety.4
+  collection: ^1.16.0
 
 dev_dependencies:
   flutter_test:

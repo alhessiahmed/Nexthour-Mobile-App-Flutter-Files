@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:intro_slider/dot_animation_enum.dart';
 import 'package:intro_slider/intro_slider.dart';
-import 'package:intro_slider/slide_object.dart';
 import '/common/apipath.dart';
 import '/common/route_paths.dart';
 import '/providers/app_config.dart';
@@ -25,7 +23,7 @@ class _IntroScreenState extends State<IntroScreen> {
     setState(() {
       isLoading = true;
     });
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       final blocks = context.read<AppConfig>().slides;
       List.generate(blocks.length, (int i) {
         return slides.add(
@@ -202,7 +200,7 @@ class _IntroScreenState extends State<IntroScreen> {
       // Dot indicator
       colorDot: Theme.of(context).primaryColor,
       sizeDot: 13.0,
-      typeDotAnimation: dotSliderAnimation.SIZE_TRANSITION,
+      typeDotAnimation: DotSliderAnimation.SIZE_TRANSITION,
       // Tabs
       listCustomTabs: this.renderListCustomTabs(),
       backgroundColorAllSlides: Colors.white,

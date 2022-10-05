@@ -190,7 +190,7 @@ class _PaytmPaymentState extends State<PaytmPayment> {
               SizedBox(
                 height: 10,
               ),
-              RaisedButton(
+              ElevatedButton(
                 onPressed: () {
                   if (planDetails[widget.index].currency != "INR") {
                     Fluttertoast.showToast(
@@ -201,7 +201,9 @@ class _PaytmPaymentState extends State<PaytmPayment> {
                         userDetails!.user!.id);
                   }
                 },
-                color: primaryBlue,
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: primaryBlue,
+                ),
                 child: Text(
                   "Pay using Wallet",
                   style: TextStyle(color: Colors.white),
@@ -210,7 +212,7 @@ class _PaytmPaymentState extends State<PaytmPayment> {
               SizedBox(
                 height: 10,
               ),
-              RaisedButton(
+              ElevatedButton(
                 onPressed: () {
                   if (planDetails[widget.index].currency != "INR") {
                     Fluttertoast.showToast(
@@ -221,7 +223,9 @@ class _PaytmPaymentState extends State<PaytmPayment> {
                         userDetails!.user!.id);
                   }
                 },
-                color: primaryBlue,
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: primaryBlue,
+                ),
                 child: Text(
                   "Pay using Net Banking",
                   style: TextStyle(color: Colors.white),
@@ -230,7 +234,7 @@ class _PaytmPaymentState extends State<PaytmPayment> {
               SizedBox(
                 height: 10,
               ),
-              RaisedButton(
+              ElevatedButton(
                 onPressed: () {
                   if (planDetails[widget.index].currency != "INR") {
                     Fluttertoast.showToast(
@@ -241,7 +245,9 @@ class _PaytmPaymentState extends State<PaytmPayment> {
                         userDetails!.user!.id);
                   }
                 },
-                color: primaryBlue,
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: primaryBlue,
+                ),
                 child: Text(
                   "Pay using UPI",
                   style: TextStyle(color: Colors.white),
@@ -250,7 +256,7 @@ class _PaytmPaymentState extends State<PaytmPayment> {
               SizedBox(
                 height: 10,
               ),
-              RaisedButton(
+              ElevatedButton(
                 onPressed: () {
                   if (planDetails[widget.index].currency != "INR") {
                     Fluttertoast.showToast(
@@ -261,7 +267,9 @@ class _PaytmPaymentState extends State<PaytmPayment> {
                         userDetails!.user!.id);
                   }
                 },
-                color: primaryBlue,
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: primaryBlue,
+                ),
                 child: Text(
                   "Pay using Credit Card",
                   style: TextStyle(color: Colors.white),

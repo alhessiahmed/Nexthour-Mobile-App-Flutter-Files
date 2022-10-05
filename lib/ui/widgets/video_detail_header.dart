@@ -142,7 +142,7 @@ class VideoDetailHeaderState extends State<VideoDetailHeader>
           translate("You_dont_have_any_active_subscription_plan");
     }
     // set up the button
-    Widget cancelButton = FlatButton(
+    Widget cancelButton = TextButton(
       child: Text(
         translate("Cancel_"),
         style: TextStyle(color: activeDotColor, fontSize: 16.0),
@@ -152,7 +152,7 @@ class VideoDetailHeaderState extends State<VideoDetailHeader>
       },
     );
 
-    Widget subscribeButton = FlatButton(
+    Widget subscribeButton = TextButton(
       child: Text(
         translate("Subscribe_"),
         style: TextStyle(color: activeDotColor, fontSize: 16.0),
@@ -253,11 +253,13 @@ class VideoDetailHeaderState extends State<VideoDetailHeader>
                     ? SizedBox.shrink()
                     : Padding(
                         padding: EdgeInsets.only(left: 50.0, right: 50.0),
-                        child: RaisedButton(
-                          hoverColor: Colors.red,
-                          splashColor: Color.fromRGBO(49, 131, 41, 1.0),
-                          highlightColor: Color.fromRGBO(72, 163, 198, 1.0),
-                          color: activeDotColor,
+                        child: ElevatedButton(
+                          // hoverColor: Colors.red,
+                          // splashColor: Color.fromRGBO(49, 131, 41, 1.0),
+                          // highlightColor: Color.fromRGBO(72, 163, 198, 1.0),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: activeDotColor,
+                          ),
                           child: Container(
                             alignment: Alignment.center,
                             width: 100.0,
@@ -277,11 +279,13 @@ class VideoDetailHeaderState extends State<VideoDetailHeader>
                     ? SizedBox.shrink()
                     : Padding(
                         padding: EdgeInsets.only(left: 50.0, right: 50.0),
-                        child: RaisedButton(
-                          color: activeDotColor,
-                          hoverColor: Colors.red,
-                          splashColor: Color.fromRGBO(49, 131, 41, 1.0),
-                          highlightColor: Color.fromRGBO(72, 163, 198, 1.0),
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: activeDotColor,
+                          ),
+                          // hoverColor: Colors.red,
+                          // splashColor: Color.fromRGBO(49, 131, 41, 1.0),
+                          // highlightColor: Color.fromRGBO(72, 163, 198, 1.0),
                           child: Container(
                             alignment: Alignment.center,
                             width: 100.0,
@@ -301,11 +305,13 @@ class VideoDetailHeaderState extends State<VideoDetailHeader>
                     ? SizedBox.shrink()
                     : Padding(
                         padding: EdgeInsets.only(left: 50.0, right: 50.0),
-                        child: RaisedButton(
-                          hoverColor: Colors.red,
-                          splashColor: Color.fromRGBO(49, 131, 41, 1.0),
-                          highlightColor: Color.fromRGBO(72, 163, 198, 1.0),
-                          color: activeDotColor,
+                        child: ElevatedButton(
+                          // hoverColor: Colors.red,
+                          // splashColor: Color.fromRGBO(49, 131, 41, 1.0),
+                          // highlightColor: Color.fromRGBO(72, 163, 198, 1.0),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: activeDotColor,
+                          ),
                           child: Container(
                             alignment: Alignment.center,
                             width: 100.0,
@@ -325,11 +331,13 @@ class VideoDetailHeaderState extends State<VideoDetailHeader>
                     ? SizedBox.shrink()
                     : Padding(
                         padding: EdgeInsets.only(left: 50.0, right: 50.0),
-                        child: RaisedButton(
-                          hoverColor: Colors.red,
-                          splashColor: Color.fromRGBO(49, 131, 41, 1.0),
-                          highlightColor: Color.fromRGBO(72, 163, 198, 1.0),
-                          color: activeDotColor,
+                        child: ElevatedButton(
+                          // hoverColor: Colors.red,
+                          // splashColor: Color.fromRGBO(49, 131, 41, 1.0),
+                          // highlightColor: Color.fromRGBO(72, 163, 198, 1.0),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: activeDotColor,
+                          ),
                           child: Container(
                             alignment: Alignment.center,
                             width: 100.0,
@@ -591,11 +599,13 @@ class VideoDetailHeaderState extends State<VideoDetailHeader>
                     ? SizedBox.shrink()
                     : Padding(
                         padding: EdgeInsets.only(left: 50.0, right: 50.0),
-                        child: RaisedButton(
-                          hoverColor: Colors.red,
-                          splashColor: Color.fromRGBO(49, 131, 41, 1.0),
-                          highlightColor: Color.fromRGBO(72, 163, 198, 1.0),
-                          color: activeDotColor,
+                        child: ElevatedButton(
+                          // hoverColor: Colors.red,
+                          // splashColor: Color.fromRGBO(49, 131, 41, 1.0),
+                          // highlightColor: Color.fromRGBO(72, 163, 198, 1.0),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: activeDotColor,
+                          ),
                           child: Container(
                             alignment: Alignment.center,
                             width: 100.0,
@@ -615,11 +625,13 @@ class VideoDetailHeaderState extends State<VideoDetailHeader>
                     ? SizedBox.shrink()
                     : Padding(
                         padding: EdgeInsets.only(left: 50.0, right: 50.0),
-                        child: RaisedButton(
-                          color: activeDotColor,
-                          hoverColor: Colors.red,
-                          splashColor: Color.fromRGBO(49, 131, 41, 1.0),
-                          highlightColor: Color.fromRGBO(72, 163, 198, 1.0),
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: activeDotColor,
+                          ),
+                          // hoverColor: Colors.red,
+                          // splashColor: Color.fromRGBO(49, 131, 41, 1.0),
+                          // highlightColor: Color.fromRGBO(72, 163, 198, 1.0),
                           child: Container(
                             alignment: Alignment.center,
                             width: 100.0,
@@ -639,11 +651,13 @@ class VideoDetailHeaderState extends State<VideoDetailHeader>
                     ? SizedBox.shrink()
                     : Padding(
                         padding: EdgeInsets.only(left: 50.0, right: 50.0),
-                        child: RaisedButton(
-                          color: activeDotColor,
-                          hoverColor: Colors.red,
-                          splashColor: Color.fromRGBO(49, 131, 41, 1.0),
-                          highlightColor: Color.fromRGBO(72, 163, 198, 1.0),
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: activeDotColor,
+                          ),
+                          // hoverColor: Colors.red,
+                          // splashColor: Color.fromRGBO(49, 131, 41, 1.0),
+                          // highlightColor: Color.fromRGBO(72, 163, 198, 1.0),
                           child: Container(
                             alignment: Alignment.center,
                             width: 100.0,
@@ -663,11 +677,13 @@ class VideoDetailHeaderState extends State<VideoDetailHeader>
                     ? SizedBox.shrink()
                     : Padding(
                         padding: EdgeInsets.only(left: 50.0, right: 50.0),
-                        child: RaisedButton(
-                          color: activeDotColor,
-                          hoverColor: Colors.red,
-                          splashColor: Color.fromRGBO(49, 131, 41, 1.0),
-                          highlightColor: Color.fromRGBO(72, 163, 198, 1.0),
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: activeDotColor,
+                          ),
+                          // hoverColor: Colors.red,
+                          // splashColor: Color.fromRGBO(49, 131, 41, 1.0),
+                          // highlightColor: Color.fromRGBO(72, 163, 198, 1.0),
                           child: Container(
                             alignment: Alignment.center,
                             width: 100.0,
@@ -1040,7 +1056,8 @@ class VideoDetailHeaderState extends State<VideoDetailHeader>
                       }
                     },
                     icon: Icon(Icons.play_arrow,
-                        size: 30.0, color: Theme.of(context).accentColor),
+                        size: 30.0,
+                        color: Theme.of(context).colorScheme.secondary),
                     label: Text(
                       translate('Watch_Now'),
                     ),
@@ -1066,7 +1083,8 @@ class VideoDetailHeaderState extends State<VideoDetailHeader>
                     ),
                     onPressed: _onTapTrailer,
                     icon: Icon(Icons.play_arrow_outlined,
-                        size: 30.0, color: Theme.of(context).accentColor),
+                        size: 30.0,
+                        color: Theme.of(context).colorScheme.secondary),
                     label: Text(
                       translate('Preview_'),
                     ),
@@ -1076,7 +1094,7 @@ class VideoDetailHeaderState extends State<VideoDetailHeader>
             )
           : Column(
               children: <Widget>[
-                OutlineButton(
+                OutlinedButton(
                   onPressed: () {
                     if (userDetails.active == "1" || userDetails.active == 1) {
                       if ((userDetails.removeAds == "0" ||
@@ -1120,18 +1138,20 @@ class VideoDetailHeaderState extends State<VideoDetailHeader>
                       ),
                     ],
                   ),
-                  padding: const EdgeInsets.fromLTRB(6.0, 0.0, 12.0, 0.0),
-                  shape: new RoundedRectangleBorder(
-                      borderRadius: new BorderRadius.circular(10.0)),
-                  borderSide: new BorderSide(
-                      color: Theme.of(context).primaryColor, width: 2.0),
-                  color: theme.primaryColor,
-                  highlightColor: theme.primaryColor.withOpacity(0.1),
-                  highlightedBorderColor: theme.primaryColor,
-                  splashColor: Colors.black12,
-                  highlightElevation: 0.0,
+                  // padding: const EdgeInsets.fromLTRB(6.0, 0.0, 12.0, 0.0),
+                  // shape: new RoundedRectangleBorder(
+                  //     borderRadius: new BorderRadius.circular(10.0)),
+                  // borderSide: new BorderSide(
+                  //     color: Theme.of(context).primaryColor, width: 2.0),
+                  style: TextButton.styleFrom(
+                    foregroundColor: Theme.of(context).primaryColor,
+                  ),
+                  // highlightColor: theme.primaryColor.withOpacity(0.1),
+                  // highlightedBorderColor: theme.primaryColor,
+                  // splashColor: Colors.black12,
+                  // highlightElevation: 0.0,
                 ),
-                OutlineButton(
+                OutlinedButton(
                   onPressed: _onTapTrailer,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -1160,14 +1180,14 @@ class VideoDetailHeaderState extends State<VideoDetailHeader>
                       ),
                     ],
                   ),
-                  padding: const EdgeInsets.fromLTRB(6.0, 0.0, 12.0, 0.0),
-                  shape: new RoundedRectangleBorder(
-                      borderRadius: new BorderRadius.circular(10.0)),
-                  borderSide: BorderSide(color: Colors.white70, width: 2.0),
-                  highlightColor: theme.primaryColorLight,
-                  highlightedBorderColor: theme.accentColor,
-                  splashColor: Colors.black12,
-                  highlightElevation: 0.0,
+                  // padding: const EdgeInsets.fromLTRB(6.0, 0.0, 12.0, 0.0),
+                  // shape: new RoundedRectangleBorder(
+                  //     borderRadius: new BorderRadius.circular(10.0)),
+                  // borderSide: BorderSide(color: Colors.white70, width: 2.0),
+                  // highlightColor: theme.primaryColorLight,
+                  // highlightedBorderColor: theme.colorScheme.secondary,
+                  // splashColor: Colors.black12,
+                  // highlightElevation: 0.0,
                 )
               ],
             ),

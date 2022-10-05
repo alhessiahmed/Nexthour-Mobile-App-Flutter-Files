@@ -2,7 +2,7 @@ import 'dart:isolate';
 import 'dart:ui';
 import 'dart:async';
 import 'dart:io';
-import 'package:device_info/device_info.dart';
+import 'package:device_info_plus/device_info_plus.dart';
 import 'package:android_path_provider/android_path_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_translate/flutter_translate.dart';
@@ -240,7 +240,7 @@ class _MyHomePageState extends State<MyHomePage> {
               SizedBox(
                 height: 32.0,
               ),
-              FlatButton(
+              TextButton(
                 onPressed: () {
                   _retryRequestPermission();
                 },
@@ -313,7 +313,7 @@ class _MyHomePageState extends State<MyHomePage> {
     DeviceInfoPlugin deviceInfo = DeviceInfoPlugin();
     AndroidDeviceInfo androidInfo = await deviceInfo.androidInfo;
     if (widget.platform == TargetPlatform.android &&
-        androidInfo.version.sdkInt <= 28) {
+        (androidInfo.version.sdkInt ?? 0) <= 28) {
       final status = await Permission.storage.status;
       if (status != PermissionStatus.granted) {
         final result = await Permission.storage.request();

@@ -159,7 +159,7 @@ class _ManualPaymentScreenState extends State<ManualPaymentScreen> {
   }
 
   Widget submitButton() {
-    return RaisedButton(
+    return ElevatedButton(
       onPressed: () async {
         if (proofCtrl.text.length > 0) {
           setState(() {
@@ -170,7 +170,7 @@ class _ManualPaymentScreenState extends State<ManualPaymentScreen> {
           if (x) {
             goToDialog();
           } else {
-            scaffoldKey.currentState!.showSnackBar(SnackBar(
+            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                 content: Text("Something went wrong! Try Again later.")));
           }
         }

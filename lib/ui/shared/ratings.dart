@@ -13,7 +13,7 @@ class RatingInformationSearch extends StatelessWidget {
       var star;
       if (mVideo.rating == null) {
         if (i + 1 <= 1) {
-          var color = theme.accentColor;
+          var color = theme.colorScheme.secondary;
           star = new Icon(
             Icons.star,
             color: color,
@@ -21,14 +21,14 @@ class RatingInformationSearch extends StatelessWidget {
           );
         } else {
           if (i + 0.5 <= 1) {
-            var color = theme.accentColor;
+            var color = theme.colorScheme.secondary;
             star = new Icon(
               Icons.star_half,
               color: color,
               size: 15.0,
             );
           } else {
-            var color = theme.accentColor;
+            var color = theme.colorScheme.secondary;
             star = new Icon(
               Icons.star_border,
               color: color,
@@ -38,7 +38,7 @@ class RatingInformationSearch extends StatelessWidget {
         }
       } else {
         if (i + 1 <= mVideo.rating + 1) {
-          var color = theme.accentColor;
+          var color = theme.colorScheme.secondary;
           star = new Icon(
             Icons.star,
             color: color,
@@ -46,14 +46,14 @@ class RatingInformationSearch extends StatelessWidget {
           );
         } else {
           if (i + 0.5 <= mVideo.rating + 1) {
-            var color = theme.accentColor;
+            var color = theme.colorScheme.secondary;
             star = new Icon(
               Icons.star_half,
               color: color,
               size: 15.0,
             );
           } else {
-            var color = theme.accentColor;
+            var color = theme.colorScheme.secondary;
             star = new Icon(
               Icons.star_border,
               color: color,

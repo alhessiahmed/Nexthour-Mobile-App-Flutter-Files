@@ -61,7 +61,6 @@ class _PayHerePaymentState extends State<PayHerePayment> {
 
   @override
   void didChangeDependencies() {
-    // TODO: implement didChangeDependencies
     super.didChangeDependencies();
     loadData();
   }
@@ -109,7 +108,7 @@ class _PayHerePaymentState extends State<PayHerePayment> {
             border: new Border(
                 right: new BorderSide(width: 1.0, color: Colors.white24))),
         child: Icon(
-          FontAwesomeIcons.sortAmountDownAlt,
+          FontAwesomeIcons.arrowDownShortWide,
           color: Colors.white,
           size: 20.0,
         ),
@@ -186,10 +185,10 @@ class _PayHerePaymentState extends State<PayHerePayment> {
           flex: 1,
           child: ButtonTheme(
             height: 45,
-            child: RaisedButton(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20.0),
-              ),
+            child: ElevatedButton(
+              // shape: RoundedRectangleBorder(
+              //   borderRadius: BorderRadius.circular(20.0),
+              // ),
               onPressed: () {
                 if ((merchantId == null || merchantId == '') ||
                     (merchantSecret == null || merchantSecret == '')) {
@@ -200,7 +199,11 @@ class _PayHerePaymentState extends State<PayHerePayment> {
                   startOneTimePayment(context);
                 }
               },
-              color: Color.fromRGBO(72, 163, 198, 1.0),
+
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Color.fromRGBO(72, 163, 198, 1.0),
+              ),
+
               child: Text(
                 "Continue Pay",
                 style: TextStyle(color: Colors.white),

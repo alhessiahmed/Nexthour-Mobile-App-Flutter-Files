@@ -53,7 +53,6 @@ class _RavePaymentState extends State<RavePayment> {
 
   @override
   void didChangeDependencies() {
-    // TODO: implement didChangeDependencies
     super.didChangeDependencies();
     loadData();
   }
@@ -226,10 +225,10 @@ class _RavePaymentState extends State<RavePayment> {
           flex: 1,
           child: ButtonTheme(
             height: 45,
-            child: RaisedButton(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20.0),
-              ),
+            child: ElevatedButton(
+              // shape: RoundedRectangleBorder(
+              //   borderRadius: BorderRadius.circular(20.0),
+              // ),
               onPressed: () {
                 if ((publicKey == null || publicKey == '') ||
                     (encryptionKey == null || encryptionKey == '')) {
@@ -241,7 +240,10 @@ class _RavePaymentState extends State<RavePayment> {
                   startPayment();
                 }
               },
-              color: Color.fromRGBO(72, 163, 198, 1.0),
+
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Color.fromRGBO(72, 163, 198, 1.0),
+              ),
               child: Text(
                 "Continue Pay",
                 style: TextStyle(color: Colors.white),
@@ -322,7 +324,8 @@ class _RavePaymentState extends State<RavePayment> {
       sendPaymentDetails(orderRef, "Rave");
     }
     print(response);
-    scaffoldKey.currentState!
+    // scaffoldKey.currentState!
+    ScaffoldMessenger.of(context)
         .showSnackBar(SnackBar(content: Text((response?.message)!)));
   }
 

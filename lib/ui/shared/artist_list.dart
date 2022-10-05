@@ -126,8 +126,10 @@ class _ArtistListState extends State<ArtistList> {
                           '${actorsList![index]!.name}',
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                            color:
-                                Theme.of(context).accentColor.withOpacity(0.6),
+                            color: Theme.of(context)
+                                .colorScheme
+                                .secondary
+                                .withOpacity(0.6),
                             fontSize: 13.0,
                           ),
                         ),

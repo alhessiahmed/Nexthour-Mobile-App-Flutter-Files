@@ -102,7 +102,7 @@ class _WatchHistoryScreenState extends State<WatchHistoryScreen> {
     setState(() {
       _visible = false;
     });
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) async {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) async {
       getWatchHistory();
     });
   }

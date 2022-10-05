@@ -23,20 +23,20 @@ class RatingInformation extends StatelessWidget {
     for (var i = 1; i <= 5; i++) {
       var star;
       if (i + 1 <= vRating + 1) {
-        var color = theme.accentColor;
+        var color = theme.colorScheme.secondary;
         star = new Icon(
           Icons.star,
           color: color,
         );
       } else {
         if (i + 0.5 <= vRating + 1) {
-          var color = theme.accentColor;
+          var color = theme.colorScheme.secondary;
           star = new Icon(
             Icons.star_half,
             color: color,
           );
         } else {
-          var color = theme.accentColor;
+          var color = theme.colorScheme.secondary;
           star = new Icon(
             Icons.star_border,
             color: color,
@@ -71,7 +71,7 @@ class RatingInformation extends StatelessWidget {
           "$vRating",
           style: textTheme.headline6!.copyWith(
             fontWeight: FontWeight.w400,
-            color: theme.accentColor,
+            color: theme.colorScheme.secondary,
           ),
         ),
         new Padding(

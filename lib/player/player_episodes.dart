@@ -61,7 +61,8 @@ class _PlayerEpisodeState extends State<PlayerEpisode>
       "count": '$count',
     }, headers: {
       // ignore: deprecated_member_use
-      HttpHeaders.AUTHORIZATION: "Bearer $authToken"
+      // HttpHeaders.AUTHORIZATION: "Bearer $authToken"
+      HttpHeaders.authorizationHeader: "Bearer $authToken"
     });
     print(updateScreensResponse.statusCode);
     print(updateScreensResponse.body);
@@ -121,8 +122,7 @@ class _PlayerEpisodeState extends State<PlayerEpisode>
 
   @override
   void dispose() {
-    // TODO: implement dispose
-    WidgetsBinding.instance!.removeObserver(this);
+    WidgetsBinding.instance.removeObserver(this);
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,
@@ -141,7 +141,7 @@ class _PlayerEpisodeState extends State<PlayerEpisode>
         "Episode URL: ${APIData.episodePlayer + '${userDetails.user!.id}/${userDetails.code}/${widget.id}'}");
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
-    // TODO: implement build
+
     SystemChrome.setPreferredOrientations(
         [DeviceOrientation.landscapeLeft, DeviceOrientation.landscapeRight]);
     print("player episodes");

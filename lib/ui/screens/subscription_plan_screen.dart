@@ -415,7 +415,6 @@ class _SubPlanScreenState extends State<SubPlanScreen> {
 //  Build Method
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return SafeArea(
       child: Scaffold(
         appBar: customAppBar(context, translate("Subscription_Plans"))

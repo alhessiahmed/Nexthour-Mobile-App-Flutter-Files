@@ -142,7 +142,6 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
                 backgroundColor: Theme.of(context).primaryColorLight,
                 selectedIconTheme: Theme.of(context).primaryIconTheme,
                 unselectedIconTheme: Theme.of(context).iconTheme,
-                selectedItemColor: Theme.of(context).textSelectionColor,
                 unselectedItemColor: Theme.of(context).hintColor,
                 items: <BottomNavigationBarItem>[
                   BottomNavigationBarItem(
@@ -172,7 +171,6 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
                 backgroundColor: Theme.of(context).primaryColorLight,
                 selectedIconTheme: Theme.of(context).primaryIconTheme,
                 unselectedIconTheme: Theme.of(context).iconTheme,
-                selectedItemColor: Theme.of(context).textSelectionColor,
                 unselectedItemColor: Theme.of(context).hintColor,
                 items: <BottomNavigationBarItem>[
                   BottomNavigationBarItem(

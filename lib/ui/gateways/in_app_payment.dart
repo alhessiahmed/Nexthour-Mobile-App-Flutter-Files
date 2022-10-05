@@ -24,12 +24,12 @@ class _InAppState extends State<InApp> {
   List<IAPItem> _items = [];
 
   startMyConnection() async {
-    await FlutterInappPurchase.instance.initConnection;
+    await FlutterInappPurchase.instance.initialize();
   }
 
   endMyConnection() async {
     print("---------- End Connection Button Pressed");
-    await FlutterInappPurchase.instance.endConnection;
+    await FlutterInappPurchase.instance.finalize(); // .endConnection;
     if (_purchaseUpdatedSubscription != null) {
       _purchaseUpdatedSubscription!.cancel();
       _purchaseUpdatedSubscription = null;
@@ -60,7 +60,7 @@ class _InAppState extends State<InApp> {
   void initState() {
     super.initState();
     initPlatformState();
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
 //      For Testing
       _productLists.add("android.test.canceled");
 
@@ -80,7 +80,7 @@ class _InAppState extends State<InApp> {
   // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> initPlatformState() async {
     // prepare
-    var result = await FlutterInappPurchase.instance.initConnection;
+    var result = await FlutterInappPurchase.instance.initialize();
     print('result: $result');
 
     // If the widget was removed from the tree while the asynchronous platform
@@ -92,7 +92,7 @@ class _InAppState extends State<InApp> {
 
     // refresh items for android
     try {
-      String? msg = await (FlutterInappPurchase.instance.consumeAllItems
+      String? msg = await (FlutterInappPurchase.instance.consumeAll()
           as FutureOr<String?>);
       print('consumeAllItems: $msg');
     } catch (err) {
@@ -135,11 +135,13 @@ class _InAppState extends State<InApp> {
                               flex: 1,
                               child: ButtonTheme(
                                 height: 48,
-                                child: RaisedButton(
+                                child: ElevatedButton(
                                   onPressed: () {
                                     this._requestPurchase(item);
                                   },
-                                  color: primaryBlue,
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: primaryBlue,
+                                  ),
                                   child: Text(
                                     'Subscribe',
                                     style: TextStyle(color: Colors.white),

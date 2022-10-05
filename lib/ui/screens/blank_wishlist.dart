@@ -49,8 +49,10 @@ class _BlankWishListState extends State<BlankWishList> {
         SizedBox(
           height: 40.0,
         ),
-        FlatButton(
-            color: Theme.of(context).primaryColor,
+        TextButton(
+            style: TextButton.styleFrom(
+              foregroundColor: Theme.of(context).primaryColor,
+            ),
             onPressed: () {
               Navigator.pushNamed(context, RoutePaths.bottomNavigationHome);
             },

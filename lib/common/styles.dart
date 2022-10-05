@@ -71,11 +71,7 @@ IconThemeData _customIconTheme4(IconThemeData original) {
 ThemeData buildLightTheme() {
   final ThemeData base = ThemeData.light();
   return base.copyWith(
-    colorScheme: kColorScheme,
-    buttonColor: kTeal400,
     cardColor: Colors.white,
-    textSelectionColor: kLightThemeTextColor,
-    cursorColor: kLightAccent,
     errorColor: kErrorRed,
     buttonTheme: const ButtonThemeData(
       colorScheme: kColorScheme,
@@ -86,26 +82,32 @@ ThemeData buildLightTheme() {
     primaryIconTheme: _customIconTheme1(base.iconTheme),
     textTheme: _buildTextTheme(base.textTheme),
     primaryTextTheme: _buildTextTheme(base.primaryTextTheme),
-    accentTextTheme: _buildTextTheme(base.accentTextTheme),
     iconTheme: _customIconTheme2(base.iconTheme),
     hintColor: kHintColor,
     backgroundColor: Colors.white,
     primaryColor: kMainThemeColor,
-    accentColor: kLightThemeTextHeading,
     scaffoldBackgroundColor: kLightBG2,
     appBarTheme: AppBarTheme(
       elevation: 0,
-      textTheme: TextTheme(
+      iconTheme: IconThemeData(
+        color: kLightAccent,
+      ),
+      toolbarTextStyle: TextTheme(
         headline6: TextStyle(
           color: kDarkBG,
           fontSize: 18.0,
           fontWeight: FontWeight.w800,
         ),
-      ),
-      iconTheme: IconThemeData(
-        color: kLightAccent,
-      ),
+      ).bodyText2,
+      titleTextStyle: TextTheme(
+        headline6: TextStyle(
+          color: kDarkBG,
+          fontSize: 18.0,
+          fontWeight: FontWeight.w800,
+        ),
+      ).headline6,
     ),
+    colorScheme: kColorScheme.copyWith(secondary: kLightThemeTextHeading),
   );
 }
 
@@ -138,9 +140,7 @@ TextTheme _buildTextTheme(TextTheme base) {
 
 const ColorScheme kColorScheme = ColorScheme(
   primary: kTeal100,
-  primaryVariant: kGrey900,
   secondary: kTeal50,
-  secondaryVariant: kGrey900,
   surface: kSurfaceWhite,
   background: kBackgroundWhite,
   error: kErrorRed,
@@ -161,26 +161,31 @@ ThemeData buildDarkTheme() {
     primaryColor: kMainThemeColor,
     primaryColorLight: kDarkBgLight,
     primaryColorDark: kDarkBgDark,
-    accentColor: kDarkAccent,
     scaffoldBackgroundColor: kDarkBG,
     hintColor: kGreyColor,
-    cursorColor: kDarkAccent,
     primaryIconTheme: _customIconTheme3(base.iconTheme),
     iconTheme: _customIconTheme4(base.iconTheme),
-    textSelectionColor: Colors.white,
     appBarTheme: AppBarTheme(
       elevation: 0,
-      textTheme: TextTheme(
+      iconTheme: IconThemeData(
+        color: kDarkAccent,
+      ),
+      toolbarTextStyle: TextTheme(
         headline6: TextStyle(
           color: kDarkBG,
           fontSize: 18.0,
           fontWeight: FontWeight.w800,
         ),
-      ),
-      iconTheme: IconThemeData(
-        color: kDarkAccent,
-      ),
+      ).bodyText2,
+      titleTextStyle: TextTheme(
+        headline6: TextStyle(
+          color: kDarkBG,
+          fontSize: 18.0,
+          fontWeight: FontWeight.w800,
+        ),
+      ).headline6,
     ),
+    colorScheme: ColorScheme.fromSwatch().copyWith(secondary: kDarkAccent),
   );
 }
 

@@ -77,12 +77,11 @@ class _FAQScreenState extends State<FAQScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     setState(() {
       _visible = false;
     });
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) async {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) async {
       FAQProvider faqProvider =
           Provider.of<FAQProvider>(context, listen: false);
       await faqProvider.fetchFAQ(context);

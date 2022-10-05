@@ -74,7 +74,7 @@ class _VideosPageState extends State<VideosPage>
     _fadeInFadeOut = Tween<double>(begin: 0.2, end: 1.0).animate(animation);
 
     animation.forward();
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) async {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) async {
       try {
         menuDataProvider =
             Provider.of<MenuDataProvider>(context, listen: false);

@@ -208,7 +208,7 @@ class _DownloadedVideosState extends State<DownloadedVideos> {
               SizedBox(
                 height: 32.0,
               ),
-              FlatButton(
+              TextButton(
                   onPressed: () {
                     _checkPermission().then((hasGranted) {
                       setState(() {

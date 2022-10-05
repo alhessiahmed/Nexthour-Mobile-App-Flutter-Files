@@ -249,7 +249,7 @@ class _WishListScreenState extends State<WishListScreen> {
     setState(() {
       _visible = false;
     });
-    WidgetsBinding.instance!.addPostFrameCallback((timestamp) {
+    WidgetsBinding.instance.addPostFrameCallback((timestamp) {
       fetchWishList();
     });
   }

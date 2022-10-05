@@ -34,7 +34,6 @@ class _PaypalScreenState extends State<PaypalScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     Future.delayed(Duration(milliseconds: 100), () {
       setState(() {

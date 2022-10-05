@@ -55,7 +55,6 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _loginWithAmazon.onLwaAuthorizeChanged.listen((LwaAuthorizeResult auth) {
       setState(() {
@@ -282,8 +281,10 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
           actions: <Widget>[
-            FlatButton(
-              color: Colors.blueAccent,
+            TextButton(
+              style: TextButton.styleFrom(
+                foregroundColor: Colors.blueAccent,
+              ),
               child: Text('OK'),
               onPressed: () {
                 Navigator.pop(context);
@@ -300,8 +301,10 @@ class _LoginScreenState extends State<LoginScreen> {
 
   showAlertDialog(BuildContext context, String msg) {
     var msg1 = msg.replaceAll('"', "");
-    Widget okButton = FlatButton(
-      color: primaryBlue,
+    Widget okButton = TextButton(
+      style: TextButton.styleFrom(
+        foregroundColor: primaryBlue,
+      ),
       child: Text("OK"),
       onPressed: () {
         Navigator.pop(context);
@@ -543,7 +546,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  FlatButton(
+                                  TextButton(
                                     onPressed: resetPasswordAlertBox,
                                     child: Text(
                                       'Forgot Password ?',
@@ -571,7 +574,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                         shape: RoundedRectangleBorder(
                                             borderRadius:
                                                 BorderRadius.circular(5.0)),
-                                        primary: primaryBlue,
+                                        backgroundColor: primaryBlue,
                                         padding: EdgeInsets.symmetric(
                                             vertical: 15.0),
                                       ),
@@ -657,7 +660,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                               flex: 1,
                                               child: ButtonTheme(
                                                 height: 50.0,
-                                                child: RaisedButton.icon(
+                                                child: ElevatedButton.icon(
                                                   icon: Image.asset(
                                                     "assets/google_logo.png",
                                                     height: 30,
@@ -670,7 +673,11 @@ class _LoginScreenState extends State<LoginScreen> {
                                                             .backgroundColor,
                                                         fontSize: 16.0),
                                                   ),
-                                                  color: Colors.white,
+                                                  style:
+                                                      ElevatedButton.styleFrom(
+                                                    backgroundColor:
+                                                        Colors.white,
+                                                  ),
                                                   onPressed: () {
                                                     signInWithGoogle().then(
                                                       (result) {
@@ -720,7 +727,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                               flex: 1,
                                               child: ButtonTheme(
                                                 height: 50.0,
-                                                child: RaisedButton.icon(
+                                                child: ElevatedButton.icon(
                                                   icon: Icon(
                                                     FontAwesomeIcons.facebook,
                                                     color: Colors.white,
@@ -732,8 +739,12 @@ class _LoginScreenState extends State<LoginScreen> {
                                                         color: Colors.white,
                                                         fontSize: 16.0),
                                                   ),
-                                                  color: Color.fromRGBO(
-                                                      60, 90, 153, 1.0),
+                                                  style:
+                                                      ElevatedButton.styleFrom(
+                                                    backgroundColor:
+                                                        Color.fromRGBO(
+                                                            60, 90, 153, 1.0),
+                                                  ),
                                                   onPressed: () {
                                                     initiateFacebookLogin();
                                                   },
@@ -807,7 +818,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.end,
                                     children: [
-                                      FlatButton(
+                                      TextButton(
                                         onPressed: resetPasswordAlertBox,
                                         child: Text(
                                           'Forgot Password ?',
@@ -836,7 +847,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                             shape: RoundedRectangleBorder(
                                                 borderRadius:
                                                     BorderRadius.circular(5.0)),
-                                            primary:
+                                            backgroundColor:
                                                 Theme.of(context).primaryColor,
                                             padding: EdgeInsets.symmetric(
                                                 vertical: 15.0),
@@ -925,53 +936,63 @@ class _LoginScreenState extends State<LoginScreen> {
                                                     flex: 1,
                                                     child: ButtonTheme(
                                                       height: 50.0,
-                                                      child: RaisedButton.icon(
-                                                          icon: Image.asset(
-                                                            "assets/google_logo.png",
-                                                            height: 30,
-                                                            width: 30,
-                                                          ),
-                                                          label: Text(
-                                                            "Google Sign In",
-                                                            style: TextStyle(
-                                                                color: Theme.of(
-                                                                        context)
-                                                                    .backgroundColor,
-                                                                fontSize: 16.0),
-                                                          ),
-                                                          color: Colors.white,
-                                                          onPressed: () {
-                                                            if (!_isLoading)
-                                                              signInWithGoogle()
-                                                                  .then(
-                                                                      (result) {
-                                                                if (result !=
-                                                                    null) {
-                                                                  setState(() {
-                                                                    isShowing =
-                                                                        true;
+                                                      child:
+                                                          ElevatedButton.icon(
+                                                              icon: Image.asset(
+                                                                "assets/google_logo.png",
+                                                                height: 30,
+                                                                width: 30,
+                                                              ),
+                                                              label: Text(
+                                                                "Google Sign In",
+                                                                style: TextStyle(
+                                                                    color: Theme.of(
+                                                                            context)
+                                                                        .backgroundColor,
+                                                                    fontSize:
+                                                                        16.0),
+                                                              ),
+                                                              style:
+                                                                  ElevatedButton
+                                                                      .styleFrom(
+                                                                backgroundColor:
+                                                                    Colors
+                                                                        .white,
+                                                              ),
+                                                              onPressed: () {
+                                                                if (!_isLoading)
+                                                                  signInWithGoogle()
+                                                                      .then(
+                                                                          (result) {
+                                                                    if (result !=
+                                                                        null) {
+                                                                      setState(
+                                                                          () {
+                                                                        isShowing =
+                                                                            true;
+                                                                      });
+                                                                      var email =
+                                                                          result
+                                                                              .email;
+                                                                      var password =
+                                                                          "password";
+                                                                      var code =
+                                                                          result
+                                                                              .uid;
+                                                                      var name =
+                                                                          result
+                                                                              .displayName;
+                                                                      goToDialog();
+                                                                      socialLogin(
+                                                                          "google",
+                                                                          email,
+                                                                          password,
+                                                                          code,
+                                                                          name,
+                                                                          "uid");
+                                                                    }
                                                                   });
-                                                                  var email =
-                                                                      result
-                                                                          .email;
-                                                                  var password =
-                                                                      "password";
-                                                                  var code =
-                                                                      result
-                                                                          .uid;
-                                                                  var name = result
-                                                                      .displayName;
-                                                                  goToDialog();
-                                                                  socialLogin(
-                                                                      "google",
-                                                                      email,
-                                                                      password,
-                                                                      code,
-                                                                      name,
-                                                                      "uid");
-                                                                }
-                                                              });
-                                                          }),
+                                                              }),
                                                     )),
                                               ],
                                             ))
@@ -992,7 +1013,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                                   flex: 1,
                                                   child: ButtonTheme(
                                                     height: 50.0,
-                                                    child: RaisedButton.icon(
+                                                    child: ElevatedButton.icon(
                                                       icon: Icon(
                                                         FontAwesomeIcons
                                                             .facebook,
@@ -1005,8 +1026,12 @@ class _LoginScreenState extends State<LoginScreen> {
                                                             color: Colors.white,
                                                             fontSize: 16.0),
                                                       ),
-                                                      color: Color.fromRGBO(
-                                                          60, 90, 153, 1.0),
+                                                      style: ElevatedButton
+                                                          .styleFrom(
+                                                        backgroundColor:
+                                                            Color.fromRGBO(60,
+                                                                90, 153, 1.0),
+                                                      ),
                                                       onPressed: () {
                                                         if (!_isLoading)
                                                           initiateFacebookLogin();

@@ -25,11 +25,10 @@ class _LanguageScreenState extends State<LanguageScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     languageProvider = Provider.of<LanguageProvider>(context, listen: false);
 
-    WidgetsBinding.instance?.addPostFrameCallback((timeStamp) async {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) async {
       for (Language language in (languageProvider.languageModel?.language)!) {
         languageList.add(language.name!);
       }

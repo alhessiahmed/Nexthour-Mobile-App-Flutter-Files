@@ -121,7 +121,8 @@ class _SeasonsArtistListState extends State<SeasonsArtistList> {
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               color: Theme.of(context)
-                                  .accentColor
+                                  .colorScheme
+                                  .secondary
                                   .withOpacity(0.6),
                               fontSize: 13.0),
                         ),
